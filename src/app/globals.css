@@ -1117,3 +1117,24 @@ main .grid>*{min-width:0}.btn-primary,.btn-navy,.btn-secondary,.btn-cyan,.btn-ou
 .footer-brand-logo,.launch-brand-logo{display:block;width:240px;max-width:100%;height:auto;aspect-ratio:1610/505;background:white;border-radius:8px;padding:12px}
 
 /* Logo sizing verified. */
+
+/* Keep the navigation and hero within narrow and enlarged-text viewports. */
+.navigation-shell,.hero-content{min-width:0;width:100%}
+.hero-content h1,.hero-content>p{max-width:100%;overflow-wrap:break-word}
+@media(max-width:700px){
+  .navigation-shell{gap:12px}
+  .navigation-shell .brand{min-width:0;flex:0 1 auto;max-width:calc(100% - 90px)}
+  .navigation-shell .brand-logo{width:clamp(140px,42vw,170px);max-width:100%}
+  .header-actions{flex-shrink:0}
+  .energy-hero{max-height:none;min-height:610px}
+  .hero-content{padding-inline:20px;padding-top:60px;padding-bottom:140px}
+  .energy-hero h1{font-size:clamp(34px,9.5vw,44px);line-height:1.08}
+  .hero-kicker{display:block;line-height:1.7;letter-spacing:.07em;overflow-wrap:break-word}
+  .hero-kicker>span{display:inline-block;margin-right:9px;vertical-align:middle}
+  .hero-content>p{width:100%;font-size:15px;line-height:1.75}
+  .hero-buttons{max-width:100%;align-items:stretch}
+  .hero-buttons>a{max-width:100%;white-space:normal}
+  .hero-bottom{align-items:center;flex-wrap:wrap;row-gap:10px}
+  .offer-strip>button{flex-shrink:0}
+}
+
