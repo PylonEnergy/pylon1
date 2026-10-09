@@ -1,0 +1,3 @@
+import { Calculator, FileText, PhoneCall } from "lucide-react";
+import Link from "./SmartLink";
+export default function FloatingSidebarCTA(){return <aside className="floating-action-rail" aria-label="Quick actions"><Link href="/#calculator" className="rail-calculator" aria-label="Calculate savings"><Calculator size={20}/><span>Calculate savings</span></Link><Link href="/get-quote" className="rail-quote" aria-label="Get a free quote"><FileText size={20}/><span>Get a free quote</span></Link><a href="tel:1300001598" className="rail-call" aria-label="Call 1300 001 598"><PhoneCall size={20}/><span>Call 1300 001 598</span></a></aside>;}

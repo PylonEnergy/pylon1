@@ -1,0 +1,4 @@
+import Link from "./SmartLink";
+import {ArrowUpRight, Clock} from "lucide-react";
+import type {SolarGuide} from "@/data/solarGuides";
+export default function BlogCards({posts}:{posts:SolarGuide[]}){return <div className="guide-grid">{posts.map(post=><article className="guide-card" key={post.slug}><Link href={`/blog/${post.slug}`} className="guide-cover" aria-label={`Read ${post.title}`}><img src={post.coverImage||"/hero-panels.png"} alt="" loading="lazy"/></Link><div className="guide-body"><div className="guide-meta"><span>{post.category||"Solar advice"}</span><span><Clock size={13}/>{post.readTime}</span></div><h2><Link href={`/blog/${post.slug}`}>{post.title}</Link></h2><p>{post.excerpt||post.content?.slice(0,180)}</p><Link className="guide-link" href={`/blog/${post.slug}`}>Read the guide <ArrowUpRight size={17}/></Link></div></article>)}</div>;}
